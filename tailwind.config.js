@@ -6,7 +6,20 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '100': '220px',
+      },
+      keyframes: {
+        enlarge: {
+          '0%': { transform: 'scale(1)'},
+          '100%': { transform: 'scale(1.3)'},
+        },
+      },
+      animation: {
+        enlarge:'enlarge 0.5s ease-in-out forwards',
+      }
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
