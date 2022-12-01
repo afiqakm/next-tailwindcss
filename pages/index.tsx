@@ -30,8 +30,8 @@ const Home: NextPage = () => {
           </div>
           </a>
           <a href='https://app.afiqakm.com/'>
-          <div className="card w-80 bg-base-100 shadow-xl border-solid">
-            <figure className='h-100'><img src="/project.png" alt="Afiq's Playground" className='transition-all ease-in-out hover:scale-125'/></figure>
+          <div className="card w-80 bg-base-100 shadow-xl border-solid transition-all ease-in-out hover:scale-125">
+            <figure className='h-100'><img src="/project.png" alt="Afiq's Playground" className=''/></figure>
             <div className="card-body">
               <h2 className="card-title justify-center">
                 Afiq's Project
