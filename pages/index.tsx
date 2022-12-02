@@ -14,7 +14,8 @@ const Home: NextPage = () => {
         </Head>
 
         <main className="flex w-full flex-1 flex-col items-center text-center gap-10 max-h-full">
-          <div className='fixed top-2 flex justify-between max-w-full w-full px-10 py-5'>
+          
+          <div className='fixed top-2 flex justify-between max-w-full w-full px-10 py-5 bg-base-100'>
             <p className='text-2xl font-bold font-sans'>Portfolio</p>
             <p className='text-2xl font-bold font-sans'>22-23</p>
           </div>
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
             startScroll={150}
             endScroll={400}
             translateY={[0, -30, 'easeInQuad']}
-            scale={[1, 0.3, 'easeInQuad']} shouldAlwaysCompleteAnimation={true} className="sticky top-0 bg-base-100 z-50">
+            scale={[1, 0.2, 'easeInQuad']} shouldAlwaysCompleteAnimation={true} className="sticky top-0 bg-base-100 z-50">
             <Image src="/afiq.svg" alt="Afiq Logo" width={400} height={500} />
           </Parallax>
           <Parallax
@@ -37,17 +38,39 @@ const Home: NextPage = () => {
             <p className='text-5xl font-bold font-sans italic pb-28'>Aspiring web developer</p>
           </Parallax>
 
-          <div className='h-screen max-h-screen w-full max-w-5xl'>
+          <div className='w-full max-w-7xl'>
             <Parallax
               opacity={[0, 1]}
               startScroll={300}
               endScroll={500}
+              translateX={[0,30]}
               shouldAlwaysCompleteAnimation={true} >
-              <p className='text-5xl font-bold font-sans justify-end pt-40'>About me!</p>
+              <p className='text-5xl font-bold font-sans items-end'>About me!</p>
             </Parallax>
-            <Image src="/img-bg.svg" alt="img-bg" width="500" height="500" className='relative z-10'/>
-            <Image src="/afiq-min.png" alt="is this really Afiq?" width="1000"
-              height="1000" style={{ width: '30%', height: 'auto' }} className='z-20'/>
+            <div className='relative w-full max-w-full flex flex-row py-24'>
+              <div className='w-full h-full'>
+                <Parallax
+                  opacity={[0, 1]}
+                  translateX={[-20, 0, 'easeInOutQuad']}
+                  shouldAlwaysCompleteAnimation={true}
+                  className='absolute z-10 mt-11'
+                >
+                  <Image src="/img-bg.svg" alt="img-bg" width="600" height="500" />
+                </Parallax>
+                <Image src="/afiq-min.png" alt="is this really Afiq?" width="500"
+                  height="1000" style={{ width: '30%', height: 'auto' }} className='absolute z-20 ml-36' />
+              </div>
+              <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                  <h2 className="card-title">Card title!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </main>
       </div>
