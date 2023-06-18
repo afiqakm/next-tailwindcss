@@ -19,9 +19,9 @@ const Home: NextPage = () => {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center gap-10">
         <motion.div
           animate={{
-            x: isClick ? 0 : '250%',
-            y: isClick ? 0 : '100%',
-            scale: isClick? 1: 0.5,
+            x: isClick ? '250%' : 0,
+            y: isClick ? '100%' : 0,
+            scale: isClick? 0.5: 1,
           }}
           style={{cursor: 'pointer'}}
           onClick={() => setIsClick(!isClick)}
