@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import { useState } from 'react';
 import { motion, useScroll } from "framer-motion";
+import EasterEggInput from './component/EasterEggInput';
 
 const Home: NextPage = () => {
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center gap-10">
+        <EasterEggInput />
         <motion.div
           animate={{
             x: isClick ? '250%' : 0,
@@ -26,7 +28,7 @@ const Home: NextPage = () => {
           style={{cursor: 'pointer'}}
           onClick={() => setIsClick(!isClick)}
         >
-          <Image src="/afiq.svg" alt="Afiq Logo" width={300} height={300} />
+          <Image src="/static/icons/afiq.svg" alt="Afiq Logo" width={300} height={300} />
         </motion.div>
       </main>
     </div>
